@@ -8,6 +8,13 @@ In this module, we will discuss the two main data structures used by `pandas` (_
 **Contents**
 
 - [Resources](#resources)
+- [Setup](#setup)
+- [Series](#series)
+  - [Series Operations and Methods](#series-operations-and-methods)
+  - [Accessing Series](#accessing-series)
+- [Data Frames](#data-frames)
+  - [DataFrame Operations and Methods](#dataframe-operations-and-methods)
+  - [Accessing DataFrames](#accessing-dataframes)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -449,7 +456,7 @@ Finally, DataFrames also provide two _attributes_ (properties) used to "quick ac
 | Key Type | Description | Example |
 | --- | --- | --- |
 | `df.loc[row_label]` | An individual value | `df.loc['Ada']` (the row labeled `Ada`) |
-| `df.loc[row_label_list]` | A list of row labels | `df.loc['Ada','Bob']` (the rows labeled `Ada` and `Bob`)
+| `df.loc[row_label_list]` | A list of row labels | `df.loc[['Ada','Bob']]` (the rows labeled `Ada` and `Bob`)
 | `df.loc[row_label_slice]` | A _slice_ of row labels | `df.loc['Bob':'Diya']` (the rows from `Bob` to `Diya`. Note that this is an _inclusive_ slice!) |
 | `df.loc[row_label, col_label]` | A _tuple_ of `(row, column)` | `df.loc['Ada', 'height']` (the value at row `Ada`, column `height`) |
 | `df.loc[row_label_seq, col_label_seq]` | A _tuple_ of label lists or slices | `df.loc['Bob':'Diya', ['height','weight']` (the rows from `Bob` to `Diya` with the columns `height` and `weight`) |
